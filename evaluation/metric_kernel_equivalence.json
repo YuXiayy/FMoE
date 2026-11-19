@@ -1,0 +1,12 @@
+{
+  "audiosr_source": "metric_sources/audiosr/demo_comparison.py",
+  "audiosr_lsd_official": 1.3489291667938232,
+  "audiosr_lsd_gpu_port": 1.3489291667938232,
+  "audiosr_abs_error": 0.0,
+  "nussl_source": "metric_sources/nussl/bss_eval.py",
+  "nussl_si_sdr_official": 10.325234816100842,
+  "nussl_si_sdr_port": 10.325234816100842,
+  "nussl_si_sdri_official": 7.222507257660183,
+  "nussl_si_sdri_port": 7.222507257660183,
+  "nussl_si_sdri_abs_error": 0.0
+}

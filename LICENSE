@@ -1,0 +1,73 @@
+F-MoE License Notice
+
+Copyright (c) 2026 F-MoE authors.
+
+Except where otherwise noted below, this work is licensed under the Creative
+Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+(CC BY-NC-SA 4.0).
+
+You may obtain a copy of the license at:
+
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+
+The work is provided for academic and non-commercial research use. Under the
+license, attribution is required, commercial use is not permitted, and adapted
+material must be distributed under the same license. Unless required by
+applicable law or agreed to in writing, the work is provided without warranties
+or conditions of any kind.
+
+Third-party notices
+-------------------
+
+Parts of the routing and restoration implementation are based on or adapted
+from MoCE-IR:
+
+  Complexity Experts are Task-Discriminative Learners for Any Image Restoration
+  https://github.com/eduardzamfir/MoCE-IR
+  Copyright (c) 2025 Computer Vision Lab, University of Wurzburg
+  Licensed under CC BY-NC-SA 4.0.
+
+Parts of the restoration backbone are based on or adapted from Restormer:
+
+  Restormer: Efficient Transformer for High-Resolution Image Restoration
+  https://github.com/swz30/Restormer
+  Copyright (c) 2022 Syed Waqas Zamir and contributors
+
+The Restormer-derived portions are subject to the following MIT License notice:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+Additional MIT-licensed reference implementations retained for numerical
+verification:
+
+AudioSR reference metric source
+  File: evaluation/metric_sources/audiosr/demo_comparison.py
+  Copyright (c) 2012-2023 Scott Chacon and others
+  Source: https://github.com/haoheliu/versatile_audio_super_resolution
+
+nussl reference metric source
+  File: evaluation/metric_sources/nussl/bss_eval.py
+  Copyright (c) 2016-2020 Interactive Audio Lab
+  Source: https://github.com/nussl/nussl
+
+The AudioSR and nussl reference files are distributed under the MIT License.
+The complete MIT permission and warranty notice reproduced above applies to
+these MIT-licensed third-party portions as well as the Restormer-derived
+portions. Their original upstream copyright notices are reproduced here.

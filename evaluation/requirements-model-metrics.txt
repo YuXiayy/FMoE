@@ -1,0 +1,10 @@
+# Optional dependencies for evaluation/run_model_metrics.py.
+# Match the CLAP implementation used by the SonicMaster evaluation release.
+numpy<2.0
+librosa==0.11.0
+scikit-image
+laion-clap==1.1.7
+
+# PQ additionally requires Meta's Audiobox Aesthetics package and released
+# checkpoint. Follow the official installation instructions:
+# https://github.com/facebookresearch/audiobox-aesthetics

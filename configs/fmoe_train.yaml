@@ -1,0 +1,97 @@
+run_id: fmoe_5s
+seed: 3407
+ckpt_dir: checkpoints
+degradation_metadata_jsonl: data/metadata.jsonl
+degradation_ignored_classes: [vocal]
+degradation_ignore_hidden_clipping_labels: true
+enable_routing_logging: true
+profile_expert_flops: false
+routing_output_dir: null
+
+inp_channels: 4
+out_channels: 4
+dim: 48
+num_blocks: [4, 6, 6, 8]
+num_dec_blocks: [2, 4, 4]
+num_exp_blocks: 4
+num_refinement_blocks: 4
+heads: [1, 2, 4, 8]
+routing_balance_ema_decay: 0.99
+input_freq_bins: 520
+expert_embed_dims: [48, 64, 96, 128]
+expert_num_bands: [16, 24, 32, 48]
+expert_depths: [1, 2, 3, 4]
+expert_num_heads: [2, 4, 4, 8]
+
+audio_data_dir: data/pairs
+audio_ext: .flac
+audio_clean_dt: dt0
+de_type: [dt1, dt2, dt3, dt4, dt5, dt6, dt7]
+batch_size: 1
+accum_grad: 1
+num_gpus: 1
+num_workers: 8
+precision: bf16-mixed
+gradient_clip_val: 5.0
+epochs: 120
+max_steps: 150000
+max_training_steps_without_override: 1000000
+allow_large_training_budget: true
+
+validation_enabled: true
+validation_split: val
+validation_batch_size: 1
+validation_num_workers: 4
+validation_max_samples: 128
+validation_interval_batches: 5000
+validation_sanity_steps: 1
+checkpoint_save_top_k: 3
+checkpoint_every_n_train_steps: 5000
+checkpoint_select: best
+
+data_preflight_enabled: true
+data_preflight_required_splits: [train, val, test]
+data_preflight_require_source_disjoint: true
+data_preflight_max_extra_pairs: 5
+data_preflight_example_limit: 10
+data_preflight_verify_audio_headers: true
+data_preflight_verify_audio_decoder_tails: true
+data_preflight_header_workers: 8
+data_preflight_header_log_interval: 10000
+audio_excluded_pair_ids: [1104849_deg6, 1148709_deg5, 1210773_deg1, 1489805_deg2, 1757948_deg7, 1790197_deg4, 1849002_deg7, 20667_deg6, 2130887_deg3, 2201357_deg5, 277804_deg1, 277804_deg2, 277804_deg3, 277804_deg4, 277804_deg5, 277804_deg6, 277804_deg7]
+
+enable_training_health_monitor: true
+health_log_interval_steps: 10
+health_timing_window_size: 200
+lr: 0.0002
+weight_decay: 0.0001
+adam_beta1: 0.9
+adam_beta2: 0.99
+adam_eps: 1.0e-8
+lr_warmup_ratio: 0.02
+lr_min_ratio: 0.0
+sample_rate: 44100
+segment_seconds: 5.0
+n_fft: 1024
+hop_length: 256
+win_length: 1024
+stft_center: true
+spec_log: false
+model_input_sr: 44100
+output_sr: 44100
+metric_segment_seconds: 3.0
+inference_segment_seconds: 5.0
+inference_overlap_ratio: 0.25
+audio_full_song: true
+
+loss_type: audio
+lambda_complex: 1.0
+lambda_wave: 1.0
+lambda_mrstft: 1.0
+lambda_degradation: 0.1
+lambda_balance: 0.1
+mrstft_fft_sizes: [512, 1024, 2048, 4096]
+mrstft_hop_sizes: [128, 256, 512, 1024]
+mrstft_win_lengths: [512, 1024, 2048, 4096]
+mrstft_sc_normalization: symmetric
+loss_check_finite: true
