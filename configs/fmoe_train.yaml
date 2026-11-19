@@ -2,7 +2,7 @@ run_id: fmoe_5s
 seed: 3407
 ckpt_dir: checkpoints
 degradation_metadata_jsonl: data/metadata.jsonl
-degradation_ignored_classes: [vocal]
+degradation_ignored_classes: []
 degradation_ignore_hidden_clipping_labels: true
 enable_routing_logging: true
 profile_expert_flops: false
