@@ -3,7 +3,7 @@
 Official PyTorch implementation of **F-MoE**, a frequency-structured mixture-of-experts model for blind music restoration under single and compound degradations.
 
 <p align="center">
-  <img src="assets/fmoe_architecture.png" width="100%" alt="F-MoE architecture">
+  <img src="assets/fmoe_architecture.webp" width="100%" alt="F-MoE architecture">
 </p>
 
 ## Results
